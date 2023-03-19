@@ -1,4 +1,4 @@
-{{-- <x-app-layout>
+<x-app-layout>
   <x-slot name="header">
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
         Product &raquo; {{ $product->name }} &raquo; Gallery
@@ -14,7 +14,7 @@
         },
         columns: [
           { data: 'id', name: 'id', width: '5%'},
-          { data: 'url', url: 'name'},
+          { data: 'url', url: 'url'},
           { data: 'is_featured', name: 'is_featured'},
           {
             data: 'action',
@@ -54,4 +54,4 @@
           </div>
       </div>
   </div>
-</x-app-layout> --}}
+</x-app-layout>
