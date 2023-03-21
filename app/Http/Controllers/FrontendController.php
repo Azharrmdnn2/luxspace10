@@ -41,6 +41,14 @@ class FrontendController extends Controller
         return view('pages.frontend.cart', compact('carts'));
     }
 
+    public function cartDelete(Request $request, $id)
+    {
+        $item = Cart::findOrFail($id);
+        $item->delete();
+
+        return redirect('cart');
+    }
+
     public function success(Request $request)
     {
         return view('pages.frontend.success');

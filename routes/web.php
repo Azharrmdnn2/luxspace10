@@ -30,6 +30,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
             ->name('cart');
         Route::post('/cart/{id}', [FrontendController::class, 'cartAdd'])
             ->name('cart-add');
+        Route::delete('/cart/{id}', [FrontendController::class, 'cartdelete'])
+            ->name('cart-delete');
         Route::get('/checkout/success', [FrontendController::class, 'success'])
             ->name('checkout-success');
     });
