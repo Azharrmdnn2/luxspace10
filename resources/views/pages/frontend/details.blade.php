@@ -59,7 +59,7 @@
       <h2 class="text-5xl font-semibold">{{ $product->name }}</h2>
       <p class="text-xl">IDR {{ number_format($product->price) }}</p>
 
-      <form action="{{ route('cartAdd', $product->id) }}" method="POST">
+      <form action="{{ route('cart-add', $product->id) }}" method="POST">
         @csrf
         <button
         type="submit"
